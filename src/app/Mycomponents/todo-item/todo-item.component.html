@@ -1,0 +1,15 @@
+<table class="table ">
+  <tr>
+    <td [ngClass]="{'strike': !todo.active}" class="tbl "><h3 class="bg-light ">{{todo.title}}</h3></td>
+    <td [ngClass]="{'strike': !todo.active}" class="desc">{{todo.desc}}</td>
+    <td>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input border border-primary" id="check" (click)="onCheckboxClick(todo)">
+        <label class="form-check-label" for="check">Mark as done</label>
+      </div>
+    </td>
+    <td>
+      <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+    </td>
+  </tr>
+</table>
